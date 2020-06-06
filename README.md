@@ -54,7 +54,7 @@ into smaller pieces followed by defining assumptions for each requirement and fi
 7. Going back to step 2 and develop the next requirement.
 \
 \
-Each pieces of requirements are added piece by piece. I've also tried to keep my code simple as much as I can <br/> 
+Each requirements are added piece by piece. I've also tried to keep my code simple as much as I can <br/> 
 and named methods such that it makes the code self-explanatory.
 
 #### Design Choices
