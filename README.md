@@ -30,8 +30,13 @@ The output files and their descriptions are the following:
 
 * The <input-filename>.log contains statistics for received, valid, and failed records.
 
-* The <input-filename>.csv contains the invalid records from input csv file.
-
+* The <input-filename>.csv contains the invalid records from input csv file. 
+  
+\
+Dependencies/third-party libraries used:
+* univocity-parser
+* slf4j-simple
+* sqlite-jdbc
 
 ## Overview
 #### Approach
