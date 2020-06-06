@@ -43,7 +43,7 @@ Dependencies/third-party libraries used:
 ## Overview
 #### Approach
 The development process follows the following steps:<br/>
-1. Defining and breaking down requirements - Identifying primary requirements and breaking them down <br/> 
+1. Defining and breaking down requirements - Identifying requirements and breaking them down <br/> 
 into smaller pieces followed by defining assumptions for each requirement and figuring out tools needed.<br/> 
                     
 2. Designing - Structuring flow of a requirement and its corresponding assumptions.
@@ -92,7 +92,7 @@ identified as a bad record.
 
 
 ###### Performance
-* Database insertion must be done in batches as inserting rows one by one will be slow.
+* Database insertion must be done in batches and transaction as inserting rows one by one will be slow.
 
 
 
