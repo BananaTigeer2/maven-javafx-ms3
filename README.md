@@ -1,7 +1,7 @@
-#Summary
+# Summary
 This repository contains my solution's source code for Mountain State Software Solutions' coding challenge.
 
-##Running the project
+## Running the project
 Note: This application requires openJDK 11 and openJFX 11 in order to run.
 
 1.You can download this source code as ZIP and extract then open the project in IntelliJ <br/> or
@@ -30,11 +30,18 @@ The output files and their descriptions are the following:
 
 * The <input-filename>.log contains statistics for received, valid, and failed records.
 
-* The <input-filename>.csv contains the invalid records from input csv file.
+* The <input-filename>.csv contains the invalid records from input csv file. 
+  
+\
+Dependencies/third-party libraries used:
+* univocity-parser
 
+* slf4j-simple
 
-##Overview
-####Approach
+* sqlite-jdbc
+
+## Overview
+#### Approach
 The development process follows the following steps:<br/>
 1. Defining and breaking down requirements - Identifying primary requirements and breaking them down <br/> 
 into smaller pieces followed by defining assumptions for each requirement and figuring out tools needed.<br/> 
@@ -50,7 +57,7 @@ into smaller pieces followed by defining assumptions for each requirement and fi
 Each pieces of requirements are added piece by piece. I've also tried to keep my code simple as much as I can <br/> 
 and named methods such that it makes the code self-explanatory.
 
-####Design Choices
+#### Design Choices
 Simplicity, readability, maintainability, and speed<br/>
 * Requirements functionality are split into classes that carry out different processes.
 
@@ -59,12 +66,12 @@ Simplicity, readability, maintainability, and speed<br/>
 * The code relies on PreparedStatements and batching using transactions provided by JDBC to optimize insertion of  <br/> 
 thousands of data for fast insertions.
 
-####Assumptions
+#### Assumptions
 
-######Graphical User Interface
+###### Graphical User Interface
 * The application has to have a GUI for selecting an input file. 
 
-######Validation
+###### Validation
 * Any row that contains null in the first 10 columns and rows with data on columns greater than 10 will be <br/>
 identified as a bad record.
 
@@ -80,11 +87,11 @@ identified as a bad record.
 
 * If a column fails validation, the row containing the column data will be identified as a bad record.
 
-######Writing files
+###### Writing files
 * Existing output files with similar file name to input file must not be overwritten. Create a new file and have <br/>
 
 
-######Performance
+###### Performance
 * Database insertion must be done in batches as inserting rows one by one will be slow.
 
 
