@@ -31,11 +31,11 @@ public class MainController {
 
     @FXML
     public void processFile(){
+        //this part runs the entire thing
         ReadCSVBeanListProcessor ob1 = new ReadCSVBeanListProcessor();
         ReadCSVColumns ob2 = new ReadCSVColumns();
         ValidCSVs x = new ValidCSVs(ob1, ob2);
         x.process();
-
 
         final Logger logger = LoggerFactory.getLogger(ValidCSVs.class);
         SqliteConnection test = new SqliteConnection(x.getCustomers());
@@ -61,7 +61,7 @@ public class MainController {
 
     @FXML
     public void loadFile(){
-
+        //prepares file to parse
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Upload File Path");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV FILES", "*.csv"));

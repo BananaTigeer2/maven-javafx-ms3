@@ -30,6 +30,7 @@ public class SqliteConnection {
         File file = new File(inputName+extension);
 
         if(file.exists()){
+            //appendfile name if file with similar name already exists
             int count = 0;
             while(file.exists()){
                 count++;
@@ -75,6 +76,7 @@ public class SqliteConnection {
 
         logger.info("Batch inserting data...");
 
+        //using transaction to speed up insertion
         con.setAutoCommit(false);
         final int batchSize = 1000;
         int count = 0;

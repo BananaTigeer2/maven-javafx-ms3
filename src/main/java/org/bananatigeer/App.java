@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("main"));
+        scene = new Scene(loadFXML("main")); //loads main.fxml
         stage.setTitle("CSV Cleaner");
         stage.setScene(scene);
         stage.setResizable(false);

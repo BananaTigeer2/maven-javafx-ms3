@@ -31,6 +31,7 @@ public class ReadCSVBeanListProcessor {
         settings.getFormat().setLineSeparator("\n");
         settings.setProcessor(rowProcessor);
         settings.setProcessorErrorHandler((RowProcessorErrorHandler) (e, objects, parsingContext) -> {
+            //using error handler to get invalid rows or records
             partialInvalidRecs.add(Arrays.toString(objects));
             incrementBadRecsCount();
         });
@@ -39,6 +40,7 @@ public class ReadCSVBeanListProcessor {
         CsvParser parser = new CsvParser(settings);
         parser.parse(new File(CSVFile.getPath()));
 
+        //saves valid rows or records
         validRecs = rowProcessor.getBeans();
 
         convertBadRecs();
