@@ -35,7 +35,9 @@ The output files and their descriptions are the following:
 \
 Dependencies/third-party libraries used:
 * univocity-parser
+
 * slf4j-simple
+
 * sqlite-jdbc
 
 ## Overview
