@@ -88,7 +88,7 @@ identified as a bad record.
 * If a column fails validation, the row containing the column data will be identified as a bad record.
 
 ###### Writing files
-* Existing output files with similar file name to input file must not be overwritten. Create a new file and have <br/>
+* Existing output files with similar file name to input file must not be overwritten. <br/>
 
 
 ###### Performance
